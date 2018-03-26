@@ -1,0 +1,1 @@
+# mrbs-booking-type-view
