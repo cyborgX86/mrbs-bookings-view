@@ -1,8 +1,6 @@
 <?php
 
-/*
-Pendiente: Buscar otro CSS, otra presentación
-*/
+// Pendiente: definir un front-end diferente.
 
 require_once ("config.inc.php");
 require_once ("functions.inc.php");
@@ -23,8 +21,8 @@ echo '<!DOCTYPE html>
 			<link rel="stylesheet" type="text/css" href="css/style.css" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>' . $titlePage . '</title>
-			<script type="text/javascript" src="jquery/jquery-1.11.3.js"></script>
-			<script type="text/javascript" src="js/scroll.js"></script>
+			<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+			<script type="text/javascript" src="js/infinite.scroll.js"></script>
 			</head>
 			<body>';
 

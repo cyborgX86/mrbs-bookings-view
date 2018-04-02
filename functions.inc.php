@@ -73,7 +73,7 @@ sistema.*/
 		$timeBookingEnd = substr($row[3],11,5);
 
 		if ( ($dateBookingEnd > $date) || ($timeBookingEnd >= $time) ){
- 			echo '<li><table><tr>
+ 			echo '<li class="prueba"><table><tr>
  						<th width="33%">Día ' . substr($row[3],8,2). '-' . substr($row[3],5,2).
  						' / ' . substr($row[2],11,5) . ' horas en ' . utf8_encode ($row['room_name']) .
  						'</th><th width=\"4%\">---></th><th> ' . utf8_encode ($row['name']) .
