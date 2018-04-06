@@ -1,4 +1,4 @@
-# mrbs-booking-type-view
+# mrbs-booking-view
 
 Muestra las reservas (próximos eventos) establecidas en la aplicación MRBS Meeting Room Booking System para el tipo de reserva y el periodo de tiempo establecidos. 
 
