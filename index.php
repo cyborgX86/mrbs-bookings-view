@@ -3,7 +3,7 @@
 // Pendiente: definir un front-end diferente.
 
 require_once ("config.inc.php");
-require_once ("functions.inc.php");
+require_once ("functions.php");
 
 $connection=mysqli_connect($mysqlhost, $mysqluser, $mysqlpwd, $mysqldb);
 mysqli_select_db($connection, $mysqldb);
@@ -31,14 +31,15 @@ echo '<div id="pricing-table" class="clear">
 			<h3>' . $title;
 
 if (occupationState(qryState($date, $dateEnd, $mrbsType)) == 1){
-	echo '<span class="large"><font color="#fe2e2e">Próximamente</font></span></h3>';
+	echo '<span class="large"><font color="#4267b2">PRÓXIMAMENTE</font></span></h3>';
 
 }else{
-	echo '<span class="large"><font color="#72ce3f">Próximamente</font></span></h3>
-				<a class="signup">Estamos esperando la defensa de tu TFE</a>';
+	echo '<span class="large"><font color="#4267b2">ESTAMOS ESPERANDO TU TFE</font>
+				</span></h3>';
+
 }
 printOccupationTable(qry($date, $dateEnd, $mrbsType));
-echo 'Información actualizada en tiempo real - Hora del sistema: '
-			. $time . ' - TFE\'s comprendidos entre: ' . $date .' y ' . $dateEnd;
-echo '</div></div></body></html>';
+echo '</div></div>';
+getIndicators(qry($date, $dateEnd, $mrbsType));
+echo '</body></html>';
 ?>
