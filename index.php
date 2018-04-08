@@ -3,7 +3,7 @@
 // Pendiente: definir un front-end diferente.
 
 require_once ("config.inc.php");
-require_once ("functions.php");
+require_once ("functions.inc.php");
 
 $connection=mysqli_connect($mysqlhost, $mysqluser, $mysqlpwd, $mysqldb);
 mysqli_select_db($connection, $mysqldb);
