@@ -19,6 +19,8 @@ $(document).ready(function() {
 function append_clone(){
   $("#contain li").each(function(){
     $("#contain li").clone().appendTo("#contain");
+    if ($("#contain li").length > 100)
+      return false;
   });
 }
 
