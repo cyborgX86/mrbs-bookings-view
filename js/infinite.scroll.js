@@ -19,8 +19,8 @@ $(document).ready(function() {
 function append_clone(){
   $("#contain li").each(function(){
     $("#contain li").clone().appendTo("#contain");
-    if ($("#contain li").length > 200)
-      return false;
+    if ($("#contain li").length > 200) //evitamos buble infinito con 100 elementos máx.
+      return false; //similar a break.
   });
 }
 
@@ -37,8 +37,8 @@ function pageScroll() {
 
 /* indicators() cambia el estado del indicador de elemento de lista.*/
 function indicators() {
-setInterval(function() {
-  $('#indicators li.active').removeClass('active').next()
-  .add('#indicators li:first').last().addClass('active');
-}, 30000);
+  setInterval(function() {
+    $('#indicators li.active').removeClass('active').next()
+    .add('#indicators li:first').last().addClass('active');
+  }, 30000);
 }
